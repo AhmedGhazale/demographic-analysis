@@ -105,7 +105,7 @@ def main(args):
         val_gender_acc = 0.0
 
         with torch.no_grad():
-            for images, targets in val_loader:
+            for images, targets in tqdm(val_loader):
                 images = images.to(device)
                 age_labels = targets['age'].to(device)
                 gender_labels = targets['gender'].to(device)
