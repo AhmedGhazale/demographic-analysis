@@ -1,4 +1,4 @@
-# Age Gender Estimation model
+# Face Detection model
 
 ## Architecture
 * YOLO v11 nano variant from [ultralytics](https://github.com/ultralytics/ultralytics) is used .

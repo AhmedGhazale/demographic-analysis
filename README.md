@@ -39,8 +39,8 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ```bash 
 pip install -r requirements.txt
 ``` 
-* to get started with AI model training and optimization got to [ai](ai/) folder.
-* to get started with running the web app got [web_app](web_app) folder.
+* to get started with AI model training and optimization go to [ai](ai/) folder.
+* to get started with running the web app go to [web_app](web_app) folder.
 
 ## results
 youtube demo video.   
