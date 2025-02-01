@@ -14,6 +14,8 @@ def convert_widerface_to_yolo(wider_dir, output_dir):
     splits = ['train', 'val']  # WIDERFace splits to process
 
     for split in splits:
+
+        print(f"started processing {split} split, (this can take some time)")
         # Path to the annotation file
         ann_file = os.path.join(wider_dir, 'wider_face_split', f'wider_face_{split}_bbx_gt.txt')
 

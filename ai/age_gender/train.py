@@ -8,6 +8,7 @@ from model import AgeGenderModel
 from dataset import UTKFaceDataset, get_train_transforms, get_val_transforms
 import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
+from tqdm import tqdm
 
 class TransformSubset(Dataset):
     def __init__(self, subset, transform=None):
@@ -67,13 +68,13 @@ def main(args):
 
     best_val_loss = float('inf')
 
-    for epoch in range(args.epochs):
+    for epoch in tqdm(range(args.epochs)):
         model.train()
         train_age_loss = 0.0
         train_gender_loss = 0.0
         train_gender_acc = 0.0
 
-        for images, targets in train_loader:
+        for images, targets in tqdm(train_loader):
             images = images.to(device)
             age_labels = targets['age'].to(device)
             gender_labels = targets['gender'].to(device)
@@ -134,7 +135,7 @@ def main(args):
         current_val_loss = val_age_loss + val_gender_loss
         if current_val_loss < best_val_loss:
             best_val_loss = current_val_loss
-            torch.save(model.state_dict(), os.path.join(args.log_dir,'best_model_{args.backbone}.pth'))
+            torch.save(model.state_dict(), os.path.join(args.log_dir,f'best_model_{args.backbone}.pth'))
 
         print(f'Epoch {epoch + 1}/{args.epochs}')
         print(f'Train Age Loss: {train_age_loss * 116:.2f} | Gender Acc: {train_gender_acc:.4f}')

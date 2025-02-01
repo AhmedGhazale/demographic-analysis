@@ -10,7 +10,7 @@ import tensorflow as tf
 
 age_gender_model = AgeGenderModel().eval()
 
-age_gender_model.load_state_dict(torch.load("best_model_efficientnet_b0.pth"))
+age_gender_model.load_state_dict(torch.load("exp1/best_model_efficientnet_b0.pth"))
 
 age_gender_model.cpu()
 
