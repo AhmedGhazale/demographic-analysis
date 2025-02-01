@@ -1,0 +1,17 @@
+flask==3.1.0
+flask-socketio==5.5.1
+python-engineio==4.11.2
+python-socketio==5.12.1
+ultralytics==8.3.70
+tf_keras==2.18.0
+sng4onnx==1.0.4
+onnx_graphsurgeon==0.5.5
+onnx2tf==1.26.3
+onnxslim==0.1.48
+tflite_support
+onnxruntime==1.20.1
+tensorflow-cpu==2.18.0
+onnx==1.17.0
+timm==1.0.14
+albumentations==2.0.2
+tqdm
