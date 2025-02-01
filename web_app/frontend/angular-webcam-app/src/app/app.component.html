@@ -1,0 +1,19 @@
+<!-- app.component.html -->
+<div class="container">
+  <h1>Webcam Processor</h1>
+  
+  <div class="video-container">
+    <h2>Live Webcam</h2>
+    <div *ngIf="!processedImage" class="placeholder">Waiting for webcam access...</div>
+    <video #videoElement autoplay muted playsinline></video>
+  </div>
+
+  <div class="processed-container">
+    <h2>Processed Frame</h2>
+    @if (processedImage) {
+      <img [src]="processedImage" alt="Processed Frame">
+    } @else {
+      <div class="placeholder">Processing first frame...</div>
+    }
+  </div>
+</div>
