@@ -43,8 +43,8 @@ pip install -r requirements.txt
 * to get started with running the web app got [web_app](web_app) folder.
 
 ## results
-
-![video](misc/results.mp4)
+youtube demo video.   
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/blZiJh9m8co/0.jpg)](https://www.youtube.com/watch?v=blZiJh9m8co)
 
 ## next steps(Bonus)
 
