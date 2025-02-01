@@ -12,3 +12,9 @@ backend implementation using flask that perform AI analysis and communicate with
     * **models/**: contains tensorflow lite models for age/gender and face detector.
         * **age_gender_float16.tflite**: age gender model quantized to float16 precision.
         * **face_detector_float16.tflite**: face detection model quantized to float16 precision.
+
+# Getting Started 
+* to start the backend run
+```bash
+python app.py 
+```
