@@ -1,6 +1,6 @@
 # Age/Gender Estimation model
 
-## architicture
+## Architecture
 * the model is a implemented as a multitask model.
 * it uses [pytorch image models](https://github.com/huggingface/pytorch-image-models) to create a CNN backbone for feature extraction.
 * it has 2 heads:
@@ -21,7 +21,9 @@ python3 train.py --data_dir dataset/UTKFace --log_dir exp2 --backbone efficientn
 ``` bash
 python3 convert_to_tflite.py
 ```
-## results
+## Results
+### Training
+
 a training trial was done (using the same parameters as training command above) and archived the following.
 * on the Gender classification task the model archives
     * **99%** accuracy on **training** set.
@@ -33,5 +35,8 @@ a training trial was done (using the same parameters as training command above) 
 gender classification accuracy.   
 ![plot](../../misc/gender_classification_accuracy.png)   
 age estimation normalized l1 loss.   
-![plot](../../misc/age_esimation_loss.png)   
-* After optimization using tensorflow lite the model size is only ~**5MB**.
+![plot](../../misc/age_esimation_loss.png)
+
+
+### TFLite conversion
+After optimization using tensorflow lite the model size is only ~**4.9MB**.
