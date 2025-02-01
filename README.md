@@ -44,6 +44,7 @@ pip install -r requirements.txt
 
 ## results
 
+![video](misc/results.mp4)
 
 ## next steps(Bonus)
 
